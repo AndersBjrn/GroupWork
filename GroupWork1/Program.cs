@@ -38,7 +38,7 @@ namespace Projektarbete
             List<string> memberNames = NameList(names);
             foreach (string name in memberNames)
             {
-                namesList.Add(new Member(name));
+                namesList.Add(new Member(name.Trim())); //ADDED .Trim() to input to get rid of possible blank space
             }
             return namesList;
         }
