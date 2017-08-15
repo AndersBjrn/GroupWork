@@ -216,7 +216,7 @@ namespace Projektarbete
                 Console.WriteLine(group.name);
                 Console.ResetColor();
                 string leaderName = group.members[0].name;
-                Console.WriteLine(leaderName + " <-- Gruppledare");
+                Console.WriteLine(leaderName + " <-- BANANAPA ;D");
                 for (int i = 1; i < group.members.Count; i++)
                 {
                     Console.WriteLine(group.members[i].name);
