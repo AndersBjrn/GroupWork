@@ -33,6 +33,8 @@ namespace Projektarbete
             else
                 Console.Write("Ange gruppmedlemmar här, separera namn med komma (exempel Lisa,Pelle,Lotta): ");
             string names = Console.ReadLine();
+			
+			//ADDED COMMENT: Kanske också kan göras i en egen metod?
             List<string> memberNames = NameList(names);
             foreach (string name in memberNames)
             {
@@ -71,7 +73,7 @@ namespace Projektarbete
 
         static bool AskForCustomMadeGroups(List<Member> membersList, int numberOfGroups)
         {
-            Console.WriteLine("Vill du ange specifikt antal medlemmar per grupp?: "); // TODO: Console.Write istället för Console.WriteLine*
+            Console.Write("Vill du ange specifikt antal medlemmar per grupp?: ");
             string input = Console.ReadLine();
             while (!input.Equals("Ja", StringComparison.InvariantCultureIgnoreCase) && !input.Equals("Nej", StringComparison.InvariantCultureIgnoreCase))
             {
