@@ -210,14 +210,18 @@ namespace Projektarbete
         static void PrintGroups(List<Group> groups)
         {
             Console.WriteLine();
-            foreach (Group group in groups)
+			Console.WriteLine("(Gruppledare markeras med grön text)");
+			Console.WriteLine();
+			foreach (Group group in groups)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine(group.name);
                 Console.ResetColor();
-                string leaderName = group.members[0].name;
+				Console.ForegroundColor = ConsoleColor.Green;
+				string leaderName = group.members[0].name;
                 Console.WriteLine(leaderName + " <-- BANANAPA ;D");
-                for (int i = 1; i < group.members.Count; i++)
+				Console.ResetColor();
+				for (int i = 1; i < group.members.Count; i++)
                 {
                     Console.WriteLine(group.members[i].name);
                 }
