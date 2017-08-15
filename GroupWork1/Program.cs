@@ -16,9 +16,13 @@ namespace Projektarbete
             string input = Console.ReadLine();
             List<Member> namesList = new List<Member>();
 
-			//ADD COMMENT: Saknade textfil ;D (kunde ingått i repot från början)
+			//ADDED COMMENT: Saknade textfil ;D (kunde ingått i repot från början)
+			//TODO: Lägg till klassnamn.txt i repot ?
 			if (input.Equals("ja", StringComparison.InvariantCultureIgnoreCase))
             {
+				/*TODO: Går att lyfta ut till egen metod? 
+				ADDED COMMENT: (kan vara praktiskt ifall man ska läsa in fler filer att då bara ha en metod att anropa 
+				istället för att kopiera koden igen.*/
                 string[] text = System.IO.File.ReadAllLines("klassnamn.txt");
                 foreach (string name in text)
                 {
@@ -67,7 +71,7 @@ namespace Projektarbete
 
         static bool AskForCustomMadeGroups(List<Member> membersList, int numberOfGroups)
         {
-            Console.WriteLine("Vill du ange specifikt antal medlemmar per grupp?: ");
+            Console.WriteLine("Vill du ange specifikt antal medlemmar per grupp?: "); // TODO: Console.Write istället för Console.WriteLine*
             string input = Console.ReadLine();
             while (!input.Equals("Ja", StringComparison.InvariantCultureIgnoreCase) && !input.Equals("Nej", StringComparison.InvariantCultureIgnoreCase))
             {
