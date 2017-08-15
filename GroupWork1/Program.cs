@@ -16,7 +16,8 @@ namespace Projektarbete
             string input = Console.ReadLine();
             List<Member> namesList = new List<Member>();
 
-            if (input.Equals("ja", StringComparison.InvariantCultureIgnoreCase))
+			//ADD COMMENT: Saknade textfil ;D (kunde ingått i repot från början)
+			if (input.Equals("ja", StringComparison.InvariantCultureIgnoreCase))
             {
                 string[] text = System.IO.File.ReadAllLines("klassnamn.txt");
                 foreach (string name in text)
@@ -55,6 +56,8 @@ namespace Projektarbete
 
             for (int i = 0; i < groupNumbers; i++)
             {
+				//ADDED COMMENTS: Nu är jag ju inte helt klart i huvudet så här i slutet på dagen,
+				//men det var inte så helt tydligt att det va "gruppnamn" som efterfrågades. =)
                 Console.Write("Ange namn för grupp nummer " + (i + 1) + ": ");
                 string groupName = Console.ReadLine();
                 groups.Add(groupName);
