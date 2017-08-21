@@ -71,7 +71,7 @@ namespace Projektarbete
 
         static bool AskForCustomMadeGroups(List<Member> membersList, int numberOfGroups)
         {
-            Console.WriteLine("Vill du ange specifikt antal medlemmar per grupp?: "); // TODO: Console.Write istället för Console.WriteLine*
+            Console.Write("Vill du ange specifikt antal medlemmar per grupp?: "); 
             string input = Console.ReadLine();
             while (!input.Equals("Ja", StringComparison.InvariantCultureIgnoreCase) && !input.Equals("Nej", StringComparison.InvariantCultureIgnoreCase))
             {
